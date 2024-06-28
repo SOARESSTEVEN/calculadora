@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <form>
+                <div id="dijite">
+                    <input type="text" name="dijite" id="input">
+                </div>
+                <div id="button">
+                    <input type="button" value="AC" onclick="dijite.value = ''" class="operacoes">
+                    <input type="button" value="DE" onclick="dijite.value = dijite.value.toString().slice(0,-1)" class="operacoes">
+                    <input type="button" value="%"  onclick="dijite.value += '%'" class="operacoes">
+                    <input type="button" value="/" class="operadores" onclick="dijite.value += '/'" class="operacoes">
+                </div>
+                <div id="button">
+                    <input type="button" value="7" onclick="dijite.value += '7'">
+                    <input type="button" value="8" onclick="dijite.value += '8'">
+                    <input type="button" value="9" onclick="dijite.value += '9'">
+                    <input type="button" value="*" class="operadores" onclick="dijite.value += '*'">
+                </div>
+                <div id="button">
+                    <input type="button" value="4" onclick="dijite.value += '4'">
+                    <input type="button" value="5" onclick="dijite.value += '5'">
+                    <input type="button" value="6" onclick="dijite.value += '6'">
+                    <input type="button" value="-"class="operadores" onclick="dijite.value += '-'">
+                </div>
+                <div id="button">
+                    <input type="button" value="1" onclick="dijite.value += '1'">
+                    <input type="button" value="2" onclick="dijite.value += '2'">
+                    <input type="button" value="3" onclick="dijite.value += '3'">
+                    <input type="button" value="+" class="operadores" onclick="dijite.value += '+'">
+                </div>
+                <div id="button">
+                    <input type="button" value="0" onclick="dijite.value += '0'">
+                    <input type="button" value="." onclick="dijite.value += ''" class="operacoes">
+                    <input type="button" value="=" class="igual" onclick="dijite.value = eval(dijite.value)">
+                </div>         
+            </form>
+        </div>
+    </div>
+</body>
+</html>
